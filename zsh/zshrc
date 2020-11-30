@@ -1,14 +1,18 @@
-# Brew 
+# Homebrew
 export HOMEBREW_NO_EMOJI=1
 
 # Shortcuts
 alias grep="grep --color"
 alias cl="clear"
-alias ll="ls -lha"
+alias ls="ls -h"
+alias ll="ls -la"
 
-# Zsh 
+# Zsh Plugins
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Compeletion
+
 
 # Git
 alias gp="git push"
@@ -30,10 +34,7 @@ export GO111MODULE=on
 export GOPROXY="https://goproxy.cn,direct"
 export GOPRIVATE="*.sensetime.com"
 
-# Prompt
-export PROMPT='%~ %b %# '
-
-# Network
+# Proxy
 set_proxy_private() {
     export https_proxy=http://127.0.0.1:7890 
     export http_proxy=http://127.0.0.1:7890 
@@ -65,7 +66,7 @@ alias mv='mv -i'
 export KUBECONFIG=/Users/luhaojing/.kube/config-133
 
 # Prompt
-PROMPT='%F{yellow}%1~%f %# '
+PROMPT='%F{yellow}%1~ %#%f '
 RPROMPT='[%F{yellow}%?%f]'
 
 # Switch between clusters 

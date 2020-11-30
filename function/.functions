@@ -1,0 +1,16 @@
+mcd()
+{
+    mkdir $1
+    cd $1
+}
+
+rmi()
+{
+    docker rmi $(docker images | grep "none" | awk '{print $3}')
+}
+
+ind()
+{
+	docker exec -it $1 sh
+}
+

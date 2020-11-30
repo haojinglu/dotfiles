@@ -1,0 +1,16 @@
+[user]
+	name = luhaojing
+	email = haojing.lu97@gmail.com
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+[url "git@gitlab.bj.sensetime.com:"]
+	insteadOf = http://gitlab.bj.sensetime.com/
+
+[core]
+	editor = vim
+	excludesfile = gitignore_global
+
+[alias]
+	graph = log --all --graph --decorate 
