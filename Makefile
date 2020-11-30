@@ -8,3 +8,15 @@ git:
 .PHONY: zsh
 zsh:
 	ln -sfn $(CURDIR)/zsh/zshrc $(HOME)/.zshrc
+
+.PHONY: alias
+alias:
+	ln -sfn $(CURDIR)/.aliases $(HOME)/.aliases
+
+.PHONY: function
+function:
+	ln -sfn $(CURDIR)/.functions $(HOME)/.functions
+
+.PHONY: tmux
+tmux:
+	ln -sfn $(CURDIR)/tmux/.tmux.conf $(HOME)/.tmux.conf
