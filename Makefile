@@ -1,4 +1,3 @@
-
 all: zsh vim git
 
 .PHONY: git
@@ -11,12 +10,12 @@ zsh:
 
 .PHONY: alias
 alias:
-	ln -sfn $(CURDIR)/.aliases $(HOME)/.aliases
+	ln -sfn $(CURDIR)/aliases $(HOME)/.aliases
 
 .PHONY: function
 function:
-	ln -sfn $(CURDIR)/.functions $(HOME)/.functions
+	ln -sfn $(CURDIR)/function $(HOME)/.function
 
 .PHONY: tmux
 tmux:
-	ln -sfn $(CURDIR)/tmux/.tmux.conf $(HOME)/.tmux.conf
+	ln -sfn $(CURDIR)/tmux/tmux.conf $(HOME)/.tmux.conf

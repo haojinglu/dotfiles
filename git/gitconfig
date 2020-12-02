@@ -10,7 +10,7 @@
 
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore
 
 [alias]
 	graph = log --all --graph --decorate 
