@@ -1,3 +1,4 @@
+alias g="git"
 alias gs="git status"
 alias sb="source ~/.bashrc"
 alias vb="vim ~/.bashrc"

@@ -2,6 +2,7 @@ all: zsh vim git
 
 .PHONY: git
 git: 
+	ln -sfn $(CURDIR)/git/gitignore $(HOME)/.gitignore
 	ln -sfn $(CURDIR)/git/gitconfig $(HOME)/.gitconfig
 
 .PHONY: zsh
@@ -19,3 +20,7 @@ function:
 .PHONY: tmux
 tmux:
 	ln -sfn $(CURDIR)/tmux/tmux.conf $(HOME)/.tmux.conf
+
+.PHONY: ssh
+ssh:
+	ln -sfn $(CURDIR)/ssh/config $(HOME)/.ssh/config
