@@ -1,24 +1,43 @@
+# git
 alias g="git"
 alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+
+# quickly edit and source configuration
 alias sb="source ~/.bashrc"
 alias vb="vim ~/.bashrc"
-alias gc="git commit"
-alias v="vim"
+alias sz="source ~/.zshrc"
+alias vz="vim ~/.zshrc"
+
+# tmux shortcuts
 alias tt="tmux ls"
+alias ta="tmux a -t"
+
+# common shortcuts
+alias v="vim"
 alias grep="grep --color"
-alias ll="ls -lah"
+alias ll="ls -lahF"
 alias sl="ls"
 alias dc="cd"
+alias l="ls -F"
+
+# avoid mistakes
 alias mv="mv -i"
 alias rm="rm -i"
 alias cp="cp -i"
+
 alias mkdir="mkdir -p"
+alias c="clear"
+alias ..="cd .."
+alias wk="ssh ubuntu@49.234.105.103"
+
+
+# easy to manipulate k8s and docker
 alias kc="kubectl"
 alias kd="kubectl describe"
 alias kn="kc ns"
-alias c="clear"
-alias wk="ssh ubuntu@49.234.105.103"
 alias dps="docker ps"
 alias dim="docker images"
-alias ..="cd .."
-alias ta="tmux a -t"
+
+

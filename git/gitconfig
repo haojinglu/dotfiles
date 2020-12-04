@@ -13,7 +13,7 @@
 	excludesfile = ~/.gitignore
 
 [alias]
-	graph = log --all --graph --decorate 
+	graph = log --all --graph --decorate --oneline
 
 [push]
 	default = simple

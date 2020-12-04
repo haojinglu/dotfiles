@@ -1,4 +1,4 @@
-# keep connection alive
+# keep connections alive
 Host *
 	TCPKeepAlive=yes
-	ServerAliveInterval 60
+	ServerAliveInterval 300
