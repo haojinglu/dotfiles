@@ -2,6 +2,9 @@
 autoload -Uz compinit
 compinit
 
+# utils
+function sourcex() { if [ -f $1 ]; then source $1; fi }
+
 # go
 export GO111MODULE=on
 export GOPROXY="https://goproxy.cn,direct"
@@ -27,7 +30,7 @@ export HOMEBREW_NO_EMOJI=1
 # kubernetes
 alias kc='kubectl'
 alias kd='kubectl describe'
-source /usr/local/share/zsh/site-functions/_kubectl
+sourcex /usr/local/share/zsh/_kubectl
 
 # zsh plugins
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
