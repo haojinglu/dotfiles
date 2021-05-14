@@ -25,6 +25,8 @@
 	rbi = rebase -i
 [push]
 	default = simple
+[pull]
+	ff = only
 [color]
 	ui = auto
 [merge]
