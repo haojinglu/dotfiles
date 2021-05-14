@@ -3,11 +3,11 @@ autoload -Uz compinit
 compinit
 
 # utils
-function sourcex() { if [ -f $1 ]; then source $1; fi }
+function sourcex() { if [ -f $1 ]; then source $1; else echo "[warning] missing $1"; fi }
 
 # go
 export GO111MODULE=on
-export GOPROXY="https://goproxy.cn,direct"
+export GOPROXY="https://goproxy.io,direct"
 
 # prompt
 PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
@@ -33,8 +33,8 @@ alias kd='kubectl describe'
 sourcex /usr/local/share/zsh/_kubectl
 
 # zsh plugins
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+sourcex /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+sourcex /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # proxy
 unproxy() {
@@ -46,8 +46,6 @@ unproxy() {
 # aliases
 alias g='git'
 
-alias d='docker'
-
 alias tt='tmux ls'
 alias ta='tmux a -t'
 
@@ -58,11 +56,13 @@ alias ll='ls -lahF'
 alias grep='grep --color'
 
 alias mkdir='mkdir -p'
+alias vi='vim'
 
 alias ..='cd ..'
 alias ....='cd ../..'
 
 alias p='cd ~/p'
+alias tmp='cd /tmp'
 
 alias vz='vim ~/.zshrc'
 alias sz='source ~/.zshrc'
@@ -72,6 +72,7 @@ alias vv='vim ~/.vimrc'
 function setJDK11() { export JAVA_HOME=$(/usr/libexec/java_home -v11) }
 function setJDK8() { export JAVA_HOME=$(/usr/libexec/java_home -v8) }
 
-# path
 export PATH="/usr/local/sbin:$PATH"
 
+# addons
+sourcex ~/.tencent.zshrc
