@@ -1,3 +1,9 @@
 Host *
 	TCPKeepAlive=yes
 	ServerAliveInterval 300
+	
+	ControlMaster auto
+	ControlPath ~/.ssh/%h-%p-%r
+	ControlPersist
+	IgnoreUnknown UseKeychain
+	UseKeychain yes
