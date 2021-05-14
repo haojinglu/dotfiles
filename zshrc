@@ -10,7 +10,7 @@ export GO111MODULE=on
 export GOPROXY="https://goproxy.io,direct"
 
 # prompt
-PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
+PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%m %1~%f%b %# '
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
