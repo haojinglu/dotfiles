@@ -20,17 +20,16 @@ zstyle ':vcs_info:git:*' formats '%F{240}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
 
 # color
-export CLICOLOR=1
+# export CLICOLOR=1
 
 # homebrew
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.cloud.tencent.com/homebrew-bottles
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_EMOJI=1
 
 # kubernetes
 alias kc='kubectl'
 alias kd='kubectl describe'
-sourcex /usr/local/share/zsh/_kubectl
+# sourcex /usr/local/share/zsh/_kubectl
 
 # zsh plugins
 sourcex /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -75,4 +74,6 @@ function setJDK8() { export JAVA_HOME=$(/usr/libexec/java_home -v8) }
 export PATH="/usr/local/sbin:$PATH"
 
 # addons
-sourcex ~/.tencent.zshrc
+# sourcex ~/.tencent.zshrc
+
+. /usr/local/etc/profile.d/z.sh

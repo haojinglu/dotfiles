@@ -9,12 +9,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'for': 'go' }
 	Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 	Plug 'preservim/nerdcommenter'
-	Plug 'altercation/vim-colors-solarized'
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'vim-airline/vim-airline'
 	Plug 'tpope/vim-surround'
-	Plug 'joshdick/onedark.vim'
 call plug#end()
 " Make Vim more useful
 set nocompatible
@@ -91,4 +89,3 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 " autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " Using gui colors rather than 256 colors
 set termguicolors
-colorscheme onedark

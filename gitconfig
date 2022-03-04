@@ -31,3 +31,5 @@
 	ui = auto
 [merge]
 	tool = vimdiff
+[init]
+	defaultBranch = main
